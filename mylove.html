@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Fantasy Love</title>
+  <style>
+    body {
+      background: radial-gradient(circle at center top, #1a1a1a, #000000);
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      position: relative;
+    }
+
+    /* 🌕 Bulan purnama */
+    .moon {
+      position: absolute;
+      top: 60px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle at 30% 30%, #ffffcc, #cccc99, #333);
+      border-radius: 50%;
+      box-shadow: 0 0 60px 30px rgba(255, 255, 200, 0.2);
+      z-index: 1;
+    }
+
+    /* 💖 Hati besar maroon jingga */
+    .love {
+      position: absolute;
+      width: 90px; /* 50% lebih besar dari 60px sebelumnya */
+      height: 90px;
+      background-color: #b3472d; /* maroon jingga */
+      transform: rotate(-45deg);
+      animation: float 6s infinite ease-in-out alternate;
+      top: 40%;
+      left: 50%;
+      margin-top: -45px;
+      margin-left: -45px;
+      z-index: 2;
+    }
+
+    .love::before,
+    .love::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      background-color: #b3472d;
+      border-radius: 50%;
+    }
+
+    .love::before {
+      top: -45px;
+      left: 0;
+    }
+
+    .love::after {
+      left: 45px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% { transform: translate(-60px, -60px) rotate(-45deg); }
+      25% { transform: translate(100px, -100px) rotate(-45deg); }
+      50% { transform: translate(-80px, 70px) rotate(-45deg); }
+      75% { transform: translate(120px, 50px) rotate(-45deg); }
+      100% { transform: translate(0px, 0px) rotate(-45deg); }
+    }
+
+    /* 🧛 Vampir */
+    .vampires {
+      position: absolute;
+      bottom: 150px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 3;
+      gap: 20px;
+    }
+
+    .vampire {
+      width: 90px;
+      height: 180px;
+      background: linear-gradient(to bottom, #222, #000);
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+
+    .vampire::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background: radial-gradient(circle at center, #990000, #330000);
+      border-radius: 50%;
+    }
+
+    /* tangan */
+    .hands {
+      position: absolute;
+      bottom: 50px;
+      width: 80px;
+      height: 10px;
+      background: #660000;
+      border-radius: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+      z-index: 2;
+    }
+
+    /* ✨ Nama di bawah */
+    h1 {
+      position: absolute;
+      bottom: 40px;
+      color: #ffb3cc;
+      font-size: 26px;
+      text-shadow: 0 0 15px #ff4d4d;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+  <div class="moon"></div>
+  <div class="love"></div>
+
+  <div class="vampires">
+    <div class="vampire"></div>
+    <div class="vampire"></div>
+    <div class="hands"></div>
+  </div>
+
+  <h1>Alfatich R. Kaffalif & Nadya Ariyanti</h1>
+</body>
+</html>
